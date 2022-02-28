@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Biplab Pati</title>
+    <link rel="shortcut icon" href="images/pro.png" type="image">
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <link rel="stylesheet" href="biplab.css">
+</head>
+
+<body>
+
+    <div class="container">
+        <h2><a href="#">DAILY TRANSACTIONS</a></h2>
+
+        <div class="tabs">
+            <div class="tabs__head">
+                <div class="tabs__toggle is-active">
+                    <span class="tabs__name">Money In</span>
+                </div>
+                <div class="tabs__toggle">
+                    <span class="tabs__name">Money Out</span>
+                </div>
+            </div>
+
+            <div class="tabs__body">
+                <div class="tabs__content is-active">
+                    <h2 class="tabs__title" style="padding: 20px 12px;">Money In Details</h2>
+                    <div class="res">
+                        <script src="https://sheetdb.io/s/t/qff60g6tudbhh.js"></script>
+                    </div>
+                </div>
+                <div class="tabs__content">
+                    <h2 class="tabs__title">Money Out Details</h2>
+                    <div class="res">
+                        <script src="https://sheetdb.io/s/t/vckyacjbuyvpb.js"></script>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <footer class="foot" style="text-align: center;">
+            <span>Design & Developed By <a href="http://www.biplab.ml" target="_blank">Biplab Pati</a> | <span
+                    class="far fa-copyright"></span> 2021 All rights reserved.</span>
+        </footer> <br>
+    </div>
+
+
+    <script>
+
+        let tabs = document.querySelectorAll('.tabs__toggle'),
+            contents = document.querySelectorAll('.tabs__content');
+
+        tabs.forEach((tab, index) => {
+            tab.addEventListener('click', () => {
+                contents.forEach((content) => {
+                    content.classList.remove('is-active');
+                });
+                tabs.forEach((tab) => {
+                    tab.classList.remove('is-active');
+                });
+                contents[index].classList.add('is-active');
+                tabs[index].classList.add('is-active');
+            });
+        });
+    </script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+</body>
+
+</html>
